@@ -1,0 +1,373 @@
+body {
+    margin: 0;
+}
+
+main {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 18px;
+    color: hsl(201, 11%, 66%);
+    margin: auto;
+}
+
+.header {
+    position: relative;
+}
+
+.header-image img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* The above lines center the element, but the top-left corner of the element is centered */    
+    transform: translate(-50%, -110%);;
+    /* To center it exactly we apply this, that would bring it to X axis -50% of its own width */
+    /* and Y axis -50% of its own width  */
+}
+
+.header-content, .component {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-tagline, .component-description {
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+.header-tagline-title, .component-title {
+    font-weight: 600;
+    color: hsl(210, 10%, 33%);
+    margin-bottom: 0;
+}
+
+.header-tagline-title {
+    font-size: 2.5rem;
+}
+
+.component-title {
+    font-size: 2rem;
+}
+
+/* Buttons CSS */
+.download-ios, .download-mac {
+    font-family: inherit;
+    font-size: inherit;
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    border: none;  
+    color: white;
+}
+
+.download-ios {
+    background-color: hsl(171, 66%, 44%);
+    /* The below line is used to apply multiple box-shadows to a single element without overwriting */
+    box-shadow: 0 2px hsl(171, 66%, 30%), 0 5px 10px 1px hsl(171, 66%, 80%); 
+    margin: 20px;
+}
+
+.download-mac {
+    background-color: hsl(233, 100%, 69%);
+    box-shadow: 0 2px hsl(233, 100%, 40%), 0 5px 10px 1px hsl(233, 100%, 90%);
+}
+
+.header {
+    margin-bottom: 75px;
+}
+
+.image-component {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.image-component img {
+    margin-right: 20px;
+    position: relative;
+    right: 35px;
+    height: auto;
+    flex-shrink: 1;
+}
+
+.image-component .component-title {
+    font-size: 1.5rem;
+}
+
+.image-component .component-description {
+    font-size: 14px;
+}
+
+.image-component .component-title,
+.image-component .component-description {
+    width: 70%;
+    text-align: left;
+}
+
+.image-component-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.component {
+    margin-bottom: 50px;
+}
+
+.image-component .component {
+    margin-bottom: 0;
+    flex: 1;
+}
+
+.image-devices-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-component-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: 0 25px 100px 25px;
+}
+
+.icon-component {
+    width: 25%;
+}
+
+.icon-component-title {
+    color: hsl(210, 10%, 33%);
+}
+
+.company-logo-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 25px 100px 25px;
+    justify-content: space-evenly;
+}
+
+.company-logo {
+    /* To ensure that maintain their aspect ratio : the images will adjust their size while 
+    preserving their aspect ratio, preventing congestion within the container */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.component-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 100px;
+}
+
+.component-buttons .component {
+    margin-bottom: 0;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(201, 11%, 97%);
+    height: 70px;
+    justify-content: space-between;
+    padding: 40px 80px;
+}
+
+.logo-image-footer img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.logo-image-footer
+{
+    /* So that all the child elements of the footer will share the available vertical 
+    space equally, and the li elements inside the .links-list container should wrap to 
+    the next column without overflow. */
+    flex: 1;
+}
+
+.links,
+.contact-us {
+    flex: 2;
+}
+
+.links-list {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    list-style-type: none;
+    flex-wrap: wrap;
+    height: 100%;
+    padding-left: 0;
+}
+
+.links-list li {
+    margin-bottom: 10px;
+    flex-basis: 25%;
+}
+
+.links-list li a {
+    text-decoration: none;
+    color : hsl(201, 11%, 50%);
+}
+
+.contact-us {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.links-contacts {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.links-contacts li {
+    margin-right: 20px;
+}
+
+/* Hover States */
+.download-ios:hover,
+.download-mac:hover {
+    opacity: 0.5;
+}
+
+.links-contacts li path {
+    transition: fill 0.3s ease;
+}
+
+.links-contacts li:hover path {
+    fill: hsl(171, 66%, 44%);
+}
+
+.links-list li:hover {
+    color : hsl(171, 66%, 44%);
+    cursor: pointer;
+}
+
+@media (min-width : 1460px) {
+    .image-component {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .logo-image img {
+        max-width: 100px; /* Adjust the max-width as needed for screens 1200px and below */
+    }
+}
+
+ @media (min-width: 700px) and (max-width: 900px) {
+    .image-component img {
+        max-width: 60%;
+    }
+
+    .image-devices-container img {
+        max-width: 80%;
+        align-self: center;
+    }
+}
+
+@media (max-width : 700px) {
+    main {
+        text-align: center;
+    }
+
+    .logo-image {
+        transform: translateY(-50px);
+    }
+
+    .header-tagline-title {
+        font-size: 2.1rem;
+        padding: 20px;
+    }
+
+    .header-tagline, .component-description {
+        width: 90%;
+    }
+    
+    .component-title {
+        font-size: 2rem;
+    }
+
+    .image-component {
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    .image-component img {
+        right: 0;
+        max-width: 90%;
+        align-self: center;
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+
+    .image-component .component-title,
+    .image-component .component-description {
+        text-align: center;
+    }
+
+    .image-component-container .component-description {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .image-devices-container img {
+        max-width: 90%;
+    }
+
+    .icon-component-container {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .icon-component {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .company-logo-container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .company-logo {
+        max-width: 50%;
+        margin-bottom: 50px;
+    }
+
+   .footer,
+   .links-list,
+   .links-contacts {
+        flex-direction: column;
+   }
+
+   .footer {
+        height: auto;
+        justify-content: center;
+        align-items: center;
+   }
+
+   .logo-image-footer {
+        max-width: 25%;
+   }
+
+   .links-contacts {
+        flex-direction: row;
+   }
+}
